@@ -5,9 +5,7 @@ class UsersEditTest < ActionDispatch::IntegrationTest
   def setup
     @user = users(:michael)
   end
-  .
-  .
-  .
+
   test "successful edit with friendly forwarding" do
     get edit_user_path(@user)
     log_in_as(@user)
