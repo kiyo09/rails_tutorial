@@ -18,12 +18,14 @@ class UsersController < ApplicationController
       flash[:info] = "Please check your email to activate your account."
       redirect_to root_url
     else
+      @feed_items = []
       render 'new'
     end
   end
 
   def show
-    @user = User.find(params[:id])                                              # paramsで:idパラメータを受け取る(/users/1にアクセスしたら1を受け取る)
+    @user = User.find(params[:id])
+    @microposts = @user.microposts.paginate(page: params[:page]) 
     redirect_to root_url and return unless @user.activated?
   end
 
