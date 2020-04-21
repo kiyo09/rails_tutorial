@@ -9,7 +9,7 @@ gem 'faker'
 gem 'carrierwave'
 gem 'mini_magick'
 gem 'jquery-rails'
-gem 'bootstrap-sass', '3.3.7'
+gem 'bootstrap-sass', '3.4.1'
 gem 'will_paginate'
 gem 'bootstrap-will_paginate'
 # Use sqlite3 as the database for Active Record
